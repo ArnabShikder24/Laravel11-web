@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row justify-content-center mt-4">
             <div class="col-md-10 d-flex justify-content-end">
-                <a class="btn btn-dark">Back</a>
+                <a href="{{ url("/") }}" class="btn btn-dark">Back</a>
             </div>
         </div>
         <div class="row d-flex justify-content-center">
@@ -27,23 +27,33 @@
                     <div class="card-header bg-dark">
                         <h4 class="text-white">Create Product</h4>
                     </div>
-                    <form>
+                    <form action="{{ route('products.store') }}" method="POST">
+                        @csrf
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="" class="form-label h6">Name</label>
-                                <input type="text" class="form-control form-control" placeholder="Name" name="name">
+                                <input value="{{ old('name') }}" type="text" class="@error('name') is-invalid @enderror form-control form-control" placeholder="Name" name="name">
+                                @error('name')
+                                    <p class="invalid-feedback">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label h6">Sku</label>
-                                <input type="text" class="form-control form-control" placeholder="Sku" name="sku">
+                                <input value="{{ old('sku') }}" type="text" class="@error('sku') is-invalid @enderror  form-control form-control" placeholder="Sku" name="sku">
+                                @error('sku')
+                                    <p class="invalid-feedback">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label h6">Price</label>
-                                <input type="text" class="form-control form-control" placeholder="Price" name="price">
+                                <input value="{{ old('price') }}" type="text" class="@error('price') is-invalid @enderror  form-control form-control" placeholder="Price" name="price">
+                                @error('price')
+                                    <p class="invalid-feedback">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label h6">Description</label>
-                                <textarea placeholder="Description" class="form-control" name="description" cols="30" rows="5"></textarea>
+                                <textarea placeholder="Description" class="form-control" name="description" cols="30" rows="5">{{ old('description') }}</textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label h6">Image</label>
