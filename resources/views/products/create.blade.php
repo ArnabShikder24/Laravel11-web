@@ -25,29 +25,29 @@
             <div class="col-md-10">
                 <div class="card borde-0 shadow-lg my-4">
                     <div class="card-header bg-dark">
-                        <h3 class="text-white">Create Product</h3>
+                        <h4 class="text-white">Create Product</h4>
                     </div>
                     <form>
                         <div class="card-body">
                             <div class="mb-3">
-                                <label for="" class="form-label h5">Name</label>
-                                <input type="text" class="form-control-lg form-control" placeholder="Name" name="name">
+                                <label for="" class="form-label h6">Name</label>
+                                <input type="text" class="form-control form-control" placeholder="Name" name="name">
                             </div>
                             <div class="mb-3">
-                                <label for="" class="form-label h5">Sku</label>
-                                <input type="text" class="form-control form-control-lg" placeholder="Sku" name="sku">
+                                <label for="" class="form-label h6">Sku</label>
+                                <input type="text" class="form-control form-control" placeholder="Sku" name="sku">
                             </div>
                             <div class="mb-3">
-                                <label for="" class="form-label h5">Price</label>
-                                <input type="text" class="form-control form-control-lg" placeholder="Price" name="price">
+                                <label for="" class="form-label h6">Price</label>
+                                <input type="text" class="form-control form-control" placeholder="Price" name="price">
                             </div>
                             <div class="mb-3">
-                                <label for="" class="form-label h5">Description</label>
-                                <textarea placeholder="Description" class="form-control" name="description" cols="30" rows="5">description</textarea>
+                                <label for="" class="form-label h6">Description</label>
+                                <textarea placeholder="Description" class="form-control" name="description" cols="30" rows="5"></textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="" class="form-label h5">Image</label>
-                                <input type="file" class="form-control form-control-lg" placeholder="Price" name="image">
+                                <label for="" class="form-label h6">Image</label>
+                                <input type="file" class="form-control form-control" name="image">
                             </div>
                             <div class="d-grid">
                                 <button class="btn btn-lg btn-primary">Submit</button>
